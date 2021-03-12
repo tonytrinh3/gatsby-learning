@@ -34,6 +34,14 @@ module.exports = {
         path: `${__dirname}/src/posts/`,
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `5k7h8964iisl`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `A7RSWtctWbrlXX_yGaYUMQqoCcsy0cZO5_Z-0iNv7no`,
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images

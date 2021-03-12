@@ -1,22 +1,102 @@
-h1{ color: red;}
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-.images{
-    text-align: center;
-    text-transform: capitalize;
-    width: 80vw;
-    margin: 0 auto 10rem auto;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-.single-image{
-    border: 3px solid red;
-    padding: 1rem 0 ;
-
+h1 {
+  text-transform: capitalize;
+}
+p {
+  line-height: 2;
+}
+.blog-text {
+  color: red;
+  line-height: 0.5;
+}
+.products-text {
+  color: green;
+  line-height: 3;
+}
+.images {
+  text-align: center;
+  text-transform: capitalize;
+  width: 80vw;
+  margin: 0 auto 10rem auto;
+}
+.single-image {
+  border: 3px solid red;
+  padding: 1rem 0;
+}
+@media screen and (min-width: 992px) {
+  .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+  }
+}
+.small {
+  width: 200px;
 }
 
-@media screen and (min-width: 992px){
-    .images{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        column-gap: 1rem;
-    }
+.single-product {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 3rem auto;
+}
+@media screen and (min-width: 768px) {
+  .single-product {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+
+.page {
+  width: 90vw;
+  max-width: 1170px;
+  text-transform: capitalize;
+  margin: 0 auto;
+}
+.page span {
+  margin-left: 2rem;
+  color: grey;
+}
+.page article {
+  margin: 2rem 0;
+}
+.page div {
+  height: 15rem;
+}
+@media screen and (min-width: 768px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .page {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.images {
+  text-align: center;
+  text-transform: capitalize;
+  width: 80vw;
+  margin: 0 auto 10rem auto;
+}
+
+.single-image {
+  border: 3px solid red;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 992px) {
+  .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+  }
 }

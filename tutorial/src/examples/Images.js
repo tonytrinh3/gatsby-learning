@@ -1,13 +1,14 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import img from "../images/image-1.jpg"
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import {  GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Images = () => {
   const data = useStaticQuery(getImages)
   console.log(data)
-  const image = getImage(data.gatsbyImage)
-  console.log(image)
+  const image2 = getImage(data.gatsbyImage2)
+  const image3 = getImage(data.gatsbyImage3)
+
   return (
     <section className="images">
       <article className="single-image">
@@ -16,10 +17,11 @@ const Images = () => {
       </article>
       <article className="single-image">
         <h3>fixed image </h3>
-        <GatsbyImage image={image} alt="image" />
+        <GatsbyImage image={image2} alt="image" />
       </article>
       <article className="single-image">
         <h3>fluid image</h3>
+        <GatsbyImage image={image3} alt="image" />
       </article>
     </section>
   )
@@ -27,19 +29,18 @@ const Images = () => {
 
 export const getImages = graphql`
   {
-    gatsbyImage: file(relativePath: { eq: "image-2.jpg" }) {
+    gatsbyImage2: file(relativePath: { eq: "image-2.jpg" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(, transformOptions: { grayscale: true })
       }
     }
 
-    fluid: file(relativePath: { eq: "image-3.jpg" }) {
+    gatsbyImage3: file(relativePath: { eq: "image-3.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(, transformOptions: { grayscale: true })
       }
     }
+
   }
 `
 

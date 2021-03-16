@@ -1,0 +1,3 @@
+[submodule "mdx2"]
+	path = mdx2
+	url = https://github.com/tonytrinh3/gatsby-learning.git
